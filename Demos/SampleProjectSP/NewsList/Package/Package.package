@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="f1b6b646-dac5-4d54-bb7e-811769873170" solutionId="f1b6b646-dac5-4d54-bb7e-811769873170" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="NewsList">
+    <features>
+        <featureReference  itemId="939cc0f9-b872-4907-b207-0821997323f9" />
+    </features>
+</package>

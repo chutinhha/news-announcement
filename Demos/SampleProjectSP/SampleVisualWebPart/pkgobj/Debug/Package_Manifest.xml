@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="42d64149-8d31-42e8-887e-72140247103f" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="SampleVisualWebPart.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SampleVisualWebPart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=033d7206800dc20b" Namespace="SampleVisualWebPart.VisualWebPart1" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\SampleVisualWebPart\VisualWebPart1\VisualWebPart1UserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="SampleVisualWebPart_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

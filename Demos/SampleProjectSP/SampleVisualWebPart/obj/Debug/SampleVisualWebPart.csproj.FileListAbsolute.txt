@@ -1,0 +1,6 @@
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\bin\Debug\SampleVisualWebPart.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\bin\Debug\SampleVisualWebPart.pdb
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\obj\Debug\SampleVisualWebPart.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\SampleVisualWebPart\obj\Debug\SampleVisualWebPart.pdb
