@@ -1,0 +1,6 @@
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\bin\Debug\NewsList.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\bin\Debug\NewsList.pdb
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\obj\Debug\NewsList.dll
+C:\Users\Thinh\Documents\Visual Studio 2010\Projects\SampleProjectSP\NewsList\obj\Debug\NewsList.pdb

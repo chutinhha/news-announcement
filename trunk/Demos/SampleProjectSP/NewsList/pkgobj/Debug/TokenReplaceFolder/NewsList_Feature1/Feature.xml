@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="NewsList Feature1" Description="My List Definition Feature" Id="939cc0f9-b872-4907-b207-0821997323f9" Scope="Web">
+  <ElementManifests>
+    <ElementManifest Location="ListInstance1\Elements.xml" />
+    <ElementManifest Location="NewsList\Elements.xml" />
+    <ElementFile Location="NewsList\Schema.xml" />
+  </ElementManifests>
+</Feature>
