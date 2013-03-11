@@ -9,6 +9,9 @@
   </Assemblies>
   <TemplateFiles>
     <TemplateFile Location="CONTROLTEMPLATES\SampleVisualWebPart\VisualWebPart1\VisualWebPart1UserControl.ascx" />
+    <TemplateFile Location="Layouts\SampleVisualWebPart\AddCSCList.aspx" />
+    <TemplateFile Location="Layouts\SampleVisualWebPart\OpenPopup.js" />
+    <TemplateFile Location="Layouts\SampleVisualWebPart\Popup.aspx" />
   </TemplateFiles>
   <FeatureManifests>
     <FeatureManifest Location="SampleVisualWebPart_Feature1\Feature.xml" />

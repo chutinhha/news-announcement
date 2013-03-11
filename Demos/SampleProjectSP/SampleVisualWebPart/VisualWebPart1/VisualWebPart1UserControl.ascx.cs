@@ -13,6 +13,9 @@ namespace SampleVisualWebPart.VisualWebPart1
     {
         public VisualWebPart1UserControl()
         {
+            Button btnOpen = new Button();
+            btnOpen.Text = "Open Popup";
+            btnOpen.Attributes.Add("onclick", "OpenPopup();return false;");
         }
 
         protected override void OnInit(EventArgs e)
