@@ -13,6 +13,24 @@ namespace SampleVisualWebPart.VisualWebPart1 {
     public partial class VisualWebPart1UserControl {
         
         /// <summary>
+        /// popuo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Microsoft.SharePoint.WebControls.ScriptLink popuo;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton btnAdd;
+        
+        /// <summary>
         /// lblList control.
         /// </summary>
         /// <remarks>

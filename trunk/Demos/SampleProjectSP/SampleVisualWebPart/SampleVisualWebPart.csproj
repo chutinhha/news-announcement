@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -52,11 +53,31 @@
     <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Layouts1\SampleVisualWebPart\AddCSCList.aspx.cs">
+      <DependentUpon>AddCSCList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts1\SampleVisualWebPart\AddCSCList.aspx.designer.cs">
+      <DependentUpon>AddCSCList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts1\SampleVisualWebPart\Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts1\SampleVisualWebPart\Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VisualWebPart1\VisualWebPart1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a7b6a929-25db-433b-98d0-d6ca4f4d196d}</SharePointProjectItemId>
+    </None>
     <None Include="key.snk" />
+    <None Include="Layouts1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{67463cb2-9af1-49c7-92b4-fc6dc82c0e7f}</SharePointProjectItemId>
+    </None>
     <None Include="VisualWebPart1\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{82bde8b6-acdb-45e3-84ca-ab3ce5b5665a}</SharePointProjectItemId>
     </None>
@@ -64,6 +85,13 @@
     <None Include="VisualWebPart1\Elements.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Layouts1\SampleVisualWebPart\AddCSCList.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts1\SampleVisualWebPart\OpenPopup.js" />
+    <Content Include="Layouts1\SampleVisualWebPart\Popup.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="VisualWebPart1\VisualWebPart1UserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -90,6 +118,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Images\SampleVisualWebPart\" />
     <Folder Include="Model\Concrete\" />
     <Folder Include="Model\Interface\" />
     <Folder Include="Presenter\" />

@@ -19,6 +19,9 @@ namespace SampleVisualWebPart.VisualWebPart1
         {
             Control control = Page.LoadControl(_ascxPath);
             Controls.Add(control);
+
+            string script = @"<script src='/_layouts/SampleVisualWebPart/OpenPopup.js' type='text/javascript'></script>";
+            this.Page.ClientScript.RegisterClientScriptBlock(this.GetType(), this.ID + "_OpenPopup", script);
         }
     }
 }
