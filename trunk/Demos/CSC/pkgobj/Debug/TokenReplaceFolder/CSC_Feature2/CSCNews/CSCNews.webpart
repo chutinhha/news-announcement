@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="CSC.CSCNews.CSCNews, CSC, Version=1.0.0.0, Culture=neutral, PublicKeyToken=04150759a95d9bf3" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">CSCNews</property>
+        <property name="Description" type="string">CSC News Visual WebPart</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="19946c9a-e7e1-4295-88e5-0f5753e79bd8" Scope="Web" Title="CSC Feature1">
+  <ElementManifests>
+    <ElementManifest Location="ListInstance1\Elements.xml" />
+    <ElementManifest Location="listNews\Elements.xml" />
+    <ElementFile Location="listNews\Schema.xml" />
+  </ElementManifests>
+</Feature>
