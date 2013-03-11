@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="6edb2677-54c2-493a-a257-9af312326ade" Scope="Site" Title="CSC Feature2">
+  <ElementManifests>
+    <ElementManifest Location="CSCNews\Elements.xml" />
+    <ElementFile Location="CSCNews\CSCNews.webpart" />
+  </ElementManifests>
+</Feature>

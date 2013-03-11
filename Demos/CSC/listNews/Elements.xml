@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List Definition project item, an error will occur when the project is run. -->
+  <Field Type="DateTime" DisplayName="Date from" StaticName="NewsDateFrom" Required="true" ID="{ABB489B1-EEB9-495E-B969-EDDFB76CA0A8}" Name="NewsDateFrom" Group="CSC News Columns" Format="DateTime"/>
+  <Field Type="DateTime" DisplayName="Date to" StaticName="NewsDateTo" Required="true" ID="{A4B6E556-911D-4BEA-9D63-CA931F1AD53A}" Name="NewsDateTo" Group="CSC News Columns" Format="DateTime"/>
+  <Field Type="URL" DisplayName="News Image" StaticName="NewsImage" Required="true"  ID="{65B2465B-B9F7-46DE-B304-65F64839F0B7}"  Name="NewsImage" Group="CSC News Columns" Format="Image"/>
+  <Field Type="Note" DisplayName="News Short" StaticName="NewsShort" Required="true"  ID="{23C6670C-E450-4408-A13D-4B7CD9C9A2C5}"  Name="NewsShort" Group="CSC News Columns" RichText="TRUE" NumLines="6" />
+  <Field Type="Note" DisplayName="News Full" StaticName="NewsFull" Required="true"  ID="{60493D67-BBBC-4AA6-A139-61778FF7880A}"  Name="NewsFull" Group="CSC News Columns" RichText="TRUE" NumLines="20" />
+    <ContentType ID="0x0100B97C1CDE7BBF4FE89DA41D152840A474" Name="ct_News" Group="CSC News Content Types" Description="News Item" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}"/>
+      <FieldRef ID="{ABB489B1-EEB9-495E-B969-EDDFB76CA0A8}"/>
+      <FieldRef ID="{A4B6E556-911D-4BEA-9D63-CA931F1AD53A}"/>
+      <FieldRef ID="{65B2465B-B9F7-46DE-B304-65F64839F0B7}"/>
+      <FieldRef ID="{23C6670C-E450-4408-A13D-4B7CD9C9A2C5}"/>
+      <FieldRef ID="{60493D67-BBBC-4AA6-A139-61778FF7880A}"/>
+    </FieldRefs>
+  </ContentType>
+  <ListTemplate
+        Name="listNews"
+        Type="10001"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="410"
+        DisplayName="CSC - listNews"
+        Description="My List Definition"
+        Image="/_layouts/images/itgen.png"
+        DisallowContentTypes="false"/>
+</Elements>
