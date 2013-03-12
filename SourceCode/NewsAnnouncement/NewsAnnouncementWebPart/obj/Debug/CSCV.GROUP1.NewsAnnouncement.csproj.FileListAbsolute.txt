@@ -1,0 +1,6 @@
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Workshop\NewsAnnouncement\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
