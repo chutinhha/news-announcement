@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" Id="08586853-df6d-465f-afd1-136f541fc75f" solutionId="08586853-df6d-465f-afd1-136f541fc75f" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" name="NewsAnnouncementWebPart">
+    <features>
+        <featureReference itemId="463d2c66-ce37-4d37-95f6-24a325087998" />
+    </features>
+</package>
