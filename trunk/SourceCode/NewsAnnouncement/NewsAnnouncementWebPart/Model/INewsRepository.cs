@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Domain;
 
 namespace NewsAnnouncementWebPart.Model
 {
-    public interface INewsRepository
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface INewsRepository : IBaseRepository<News>
     {
+
     }
 }

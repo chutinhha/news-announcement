@@ -6,6 +6,12 @@ using Microsoft.SharePoint;
 
 namespace NewsAnnouncementWebPart.Model
 {
+    /// <summary>
+    /// IBaseRepository
+    /// </summary>
+    /// <CreatedBy>Thinh Nguyen</CreatedBy>
+    /// <CreatedDate>12/03/2013</CreatedDate>
+    /// <typeparam name="T">Generic class</typeparam>
     public interface IBaseRepository<T>
     {
         /// <summary>
