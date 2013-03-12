@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" EnableContentTypes="TRUE" Title="CSC - listNews" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/CSC-listNews" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0100B97C1CDE7BBF4FE89DA41D152840A474"/>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field Type="DateTime" DisplayName="Date from" StaticName="NewsDateFrom" Required="true" ID="{ABB489B1-EEB9-495E-B969-EDDFB76CA0A8}" Name="NewsDateFrom" Group="CSC New Columns" Format="DateTime"/>
+      <Field Type="DateTime" DisplayName="Date to" StaticName="NewsDateTo" Required="true" ID="{A4B6E556-911D-4BEA-9D63-CA931F1AD53A}" Name="NewsDateTo" Group="CSC New Columns" Format="DateTime"/>
+      <Field Type="URL" DisplayName="News Image" StaticName="NewsImage" Required="true"  ID="{65B2465B-B9F7-46DE-B304-65F64839F0B7}"  Name="NewsImage" Group="CSC New Columns" Format="Image"/>
+      <Field Type="Note" DisplayName="News Short" StaticName="NewsShort" Required="true"  ID="{23C6670C-E450-4408-A13D-4B7CD9C9A2C5}"  Name="NewsShort" Group="CSC New Columns" RichText="TRUE" NumLines="6" />
+      <Field Type="Note" DisplayName="News Full" StaticName="NewsFull" Required="true"  ID="{60493D67-BBBC-4AA6-A139-61778FF7880A}"  Name="NewsFull" Group="CSC New Columns" RichText="TRUE" NumLines="20" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="NewsDateFrom"></FieldRef>
+          <FieldRef Name="NewsDateTo"></FieldRef>
+          <FieldRef Name="NewsImage"></FieldRef>
+          <FieldRef Name="NewsShort"></FieldRef>
+          <FieldRef Name="NewsFull"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

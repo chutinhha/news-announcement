@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\Meterial\CSC\bin\Debug\CSC.dll
+C:\Users\Administrator\Desktop\Meterial\CSC\bin\Debug\CSC.pdb
+C:\Users\Administrator\Desktop\Meterial\CSC\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Desktop\Meterial\CSC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Meterial\CSC\obj\Debug\CSC.dll
+C:\Users\Administrator\Desktop\Meterial\CSC\obj\Debug\CSC.pdb
+C:\Users\DuongKiet\Desktop\Material\CSC\bin\Debug\CSC.dll
+C:\Users\DuongKiet\Desktop\Material\CSC\bin\Debug\CSC.pdb
+C:\Users\DuongKiet\Desktop\Material\CSC\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Desktop\Material\CSC\obj\Debug\CSC.dll
+C:\Users\DuongKiet\Desktop\Material\CSC\obj\Debug\CSC.pdb

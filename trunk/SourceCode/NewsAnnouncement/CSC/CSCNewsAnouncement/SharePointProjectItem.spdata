@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="CSCNewsAnouncementUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="CSCNewsAnouncement\" Type="ElementManifest" />
+    <ProjectItemFile Source="CSCNewsAnouncement.webpart" Target="CSCNewsAnouncement\" Type="ElementFile" />
+    <ProjectItemFile Source="CSCNewsAnouncementUserControl.ascx" Target="CONTROLTEMPLATES\CSC\CSCNewsAnouncement\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="CSC.CSCNewsAnouncement" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>
