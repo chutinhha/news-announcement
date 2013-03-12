@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="VisualWebPart1UserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="NewsAnnouncement\" Type="ElementManifest" />
+    <ProjectItemFile Source="NewsAnnouncement.webpart" Target="NewsAnnouncement\" Type="ElementFile" />
+    <ProjectItemFile Source="VisualWebPart1UserControl.ascx" Target="CONTROLTEMPLATES\NewsAnnouncementWebPart\NewsAnnouncement\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="NewsAnnouncementWebPart.VisualWebPart1" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>
