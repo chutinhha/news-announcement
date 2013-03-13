@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="CSCV.GROUP1.NewsAnnouncement - CSCV.NewList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/CSCV.GROUP1.NewsAnnouncement-CSCV.NewList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentTypeRef ID="0x0104">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+      <Field Type="DateTime" DisplayName="Date from" StaticName="NewsDateFrom" Required="true" ID="{9CD2CD8D-17F3-4810-876E-2A4D6C6A07FF}" Name="NewsDateFrom" Group="CSC New Columns" Format="DateTime"/>
+      <Field Type="DateTime" DisplayName="Date to" StaticName="NewsDateTo" Required="true" ID="{EE46AE4D-93BD-4B16-B22B-8E282D968E86}" Name="NewsDateTo" Group="CSC New Columns" Format="DateTime"/>
+      <Field Type="URL" DisplayName="News Image" StaticName="NewsImage" Required="true"  ID="{BAE92614-2B80-429A-AE18-3CFE6A95FA0A}"  Name="NewsImage" Group="CSC New Columns" Format="Image"/>
+      <Field Type="Note" DisplayName="News Short" StaticName="NewsShort" Required="true"  ID="{2FA88269-173E-417D-9DBF-EFF38D98F5F8}"  Name="NewsShort" Group="CSC New Columns" RichText="TRUE" NumLines="6" />
+      <Field Type="Note" DisplayName="News Full" StaticName="NewsFull" Required="true"  ID="{BE1CA5DF-A618-44CD-B370-082E224C7F63}"  Name="NewsFull" Group="CSC New Columns" RichText="TRUE" NumLines="20" />
+    </Fields>
+    <Views>
+      <View BaseViewID="0" FreeForm="TRUE" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <Where>
+            <Or>
+              <IsNull>
+                <FieldRef Name="Expires" />
+              </IsNull>
+              <Geq>
+                <FieldRef Name="Expires"></FieldRef>
+                <Value Type="DateTime">
+                  <Today></Today>
+                </Value>
+              </Geq>
+            </Or>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Body" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Author" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Modified" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Attachments" Explicit="TRUE"></FieldRef>
+        </ViewFields>
+        <RowLimit>5</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,NoAnnouncements)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,NoAnnouncementsHowTo)" />
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,idHomePageNewAnnounce)" />
+          <ParameterBinding Name="MoreAnnouncements" Location="Resource(wss,MoreAnnouncements)" />
+          <ParameterBinding Name="ByText" Location="Resource(wss,2000)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,camlid4;" DefaultView="TRUE" MobileView="True" MobileDefaultView="True" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/announce.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="Modified"></FieldRef>
+          <FieldRef Name="NewsDateFrom"></FieldRef>
+          <FieldRef Name="NewsDateTo"></FieldRef>
+          <FieldRef Name="NewsImage"></FieldRef>
+          <FieldRef Name="NewsShort"></FieldRef>
+          <FieldRef Name="NewsFull"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+      </View>
+      <View BaseViewID="3" FreeForm="TRUE" Type="HTML" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink>main.xsl</XslLink>
+        <Query>
+          <Where>
+            <Or>
+              <IsNull>
+                <FieldRef Name="Expires" />
+              </IsNull>
+              <Geq>
+                <FieldRef Name="Expires"></FieldRef>
+                <Value Type="DateTime">
+                  <Today></Today>
+                </Value>
+              </Geq>
+            </Or>
+          </Where>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Body" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Author" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Modified" Explicit="TRUE"></FieldRef>
+          <FieldRef Name="Attachments" Explicit="TRUE"></FieldRef>
+        </ViewFields>
+        <RowLimit>3</RowLimit>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+    <DefaultDescription>$Resources:onetid10;</DefaultDescription>
+  </MetaData>
+</List>
