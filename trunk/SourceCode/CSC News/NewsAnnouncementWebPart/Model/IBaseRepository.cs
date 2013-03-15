@@ -49,6 +49,6 @@ namespace NewsAnnouncementWebPart.Model
         /// Get all list
         /// </summary>
         /// <returns>SPList</returns>
-        SPList Get();
+        IEnumerable<T> Get();
     }
 }
