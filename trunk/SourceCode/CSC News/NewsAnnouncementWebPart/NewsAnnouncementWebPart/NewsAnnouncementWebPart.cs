@@ -7,6 +7,7 @@ using System.Web.UI.WebControls.WebParts;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.WebControls;
 using NewsAnnouncementWebPart.View;
+using NewsAnnouncementWebPart.News_Utilities;
 
 namespace NewsAnnouncementWebPart.NewsAnnouncementWebPart
 {
@@ -20,7 +21,9 @@ namespace NewsAnnouncementWebPart.NewsAnnouncementWebPart
         {
             Control control = Page.LoadControl(_ascxPath);
             if (control != null) {
-                ((NewsAnnouncementWebPartUserControl)control).WebPart = this;
+                ((NewsAnnouncementWebPartUserControl)control).webPart = this;
+                NewsUtil.WebPart = this;
+                this.PropertyValue = NewsString.GroupContribute;
             }
             Controls.Add(control);
         }
@@ -31,9 +34,9 @@ namespace NewsAnnouncementWebPart.NewsAnnouncementWebPart
 
         Personalizable(PersonalizationScope.Shared),
 
-        WebDisplayName("Friendly Display Name"),
+        WebDisplayName("WebPart User Group"),
 
-        WebDescription("Values: Whatever value you need")]
+        WebDescription("Input webpart administrative group")]
 
         public string PropertyValue { get; set; }
     }

@@ -55,7 +55,7 @@ namespace NewsAnnouncementWebPart.ControlTemplates.CSCV.GROUP1.NewsAnnouncement 
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContent;
+        protected global::Microsoft.SharePoint.WebControls.InputFormTextBox txtContent;
         
         /// <summary>
         /// btnInsert control.

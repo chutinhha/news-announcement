@@ -68,6 +68,9 @@
     <Compile Include="ControlTemplates\NewsEdit.ascx.designer.cs">
       <DependentUpon>NewsEdit.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\News Feature\News Feature.EventReceiver.cs">
+      <DependentUpon>News Feature.feature</DependentUpon>
+    </Compile>
     <Compile Include="Layouts\CreateNews.aspx.cs">
       <DependentUpon>CreateNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
