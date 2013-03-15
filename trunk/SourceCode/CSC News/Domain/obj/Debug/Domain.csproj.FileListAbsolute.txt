@@ -1,0 +1,20 @@
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.pdb
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.dll
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.pdb
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.dll
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.pdb
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\Domain\bin\Debug\Domain.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\Domain\bin\Debug\Domain.pdb
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\Domain\obj\Debug\Domain.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\Domain\obj\Debug\Domain.pdb
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\bin\Debug\Domain.dll
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\bin\Debug\Domain.pdb
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\Domain.dll
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\Domain.pdb

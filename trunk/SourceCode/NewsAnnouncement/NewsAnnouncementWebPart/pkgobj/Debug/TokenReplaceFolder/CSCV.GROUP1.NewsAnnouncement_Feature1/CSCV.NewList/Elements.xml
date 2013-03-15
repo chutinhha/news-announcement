@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field Type="DateTime" DisplayName="Date from" StaticName="NewsDateFrom" Required="true" ID="{9CD2CD8D-17F3-4810-876E-2A4D6C6A07FF}" Name="NewsDateFrom" Group="CSC News Columns" Format="DateTime"/>
+  <Field Type="DateTime" DisplayName="Date to" StaticName="NewsDateTo" Required="true" ID="{EE46AE4D-93BD-4B16-B22B-8E282D968E86}" Name="NewsDateTo" Group="CSC News Columns" Format="DateTime"/>
+  <Field Type="URL" DisplayName="News Image" StaticName="NewsImage" Required="true"  ID="{BAE92614-2B80-429A-AE18-3CFE6A95FA0A}"  Name="NewsImage" Group="CSC News Columns" Format="Image"/>
+  <Field Type="Note" DisplayName="News Short" StaticName="NewsShort" Required="true"  ID="{2FA88269-173E-417D-9DBF-EFF38D98F5F8}"  Name="NewsShort" Group="CSC News Columns" RichText="TRUE" NumLines="6" />
+  <Field Type="Note" DisplayName="News Full" StaticName="NewsFull" Required="true"  ID="{BE1CA5DF-A618-44CD-B370-082E224C7F63}"  Name="NewsFull" Group="CSC News Columns" RichText="TRUE" NumLines="20" />
+  
+  <ContentType ID="0x0100B97C1CDE7BBF4FE89DA41D152840A474" Name="ct_News" Group="CSC News Content Types" Description="News Item" Version="0">
+    <FieldRefs>
+      <FieldRef ID="{FEAB6F02-24B7-4820-B666-B52D08EDF882}"/>
+      <FieldRef ID="{9CD2CD8D-17F3-4810-876E-2A4D6C6A07FF}"/>
+      <FieldRef ID="{EE46AE4D-93BD-4B16-B22B-8E282D968E86}"/>
+      <FieldRef ID="{BAE92614-2B80-429A-AE18-3CFE6A95FA0A}"/>
+      <FieldRef ID="{2FA88269-173E-417D-9DBF-EFF38D98F5F8}"/>
+      <FieldRef ID="{BE1CA5DF-A618-44CD-B370-082E224C7F63}"/>
+    </FieldRefs>
+  </ContentType>
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List Definition project item, an error will occur when the project is run. -->
+    <ListTemplate 
+        Name="CSCV.NewList" 
+        Type="10001" 
+        BaseType="0" 
+        OnQuickLaunch="TRUE" 
+        SecurityBits="11" 
+        Sequence="410"
+        DisplayName="CSCV.News List"
+        Description="News List Definition"
+        Image="/_layouts/images/itann.png"/>
+</Elements>

@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\bin\Debug\Domain.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\NewsAnnouncement\Domain\obj\Debug\Domain.pdb

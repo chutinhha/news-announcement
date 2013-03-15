@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="08586853-df6d-465f-afd1-136f541fc75f" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="CSCV.GROUP.NewsAnnouncement.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="CSCV.GROUP.NewsAnnouncement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83dfd338c1bf76e8" Namespace="NewsAnnouncementWebPart.NewsAnnouncementWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\NewsAnnouncementWebPart\NewsAnnouncementWebPart\NewsAnnouncementWebPartUserControl.ascx" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\CHANGES.md" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\LICENSE.md" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\README.md" />
+    <TemplateFile Location="Layouts\CreateNews.aspx" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\build-config.js" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\ckeditor.js" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\config.js" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\contents.css" />
+    <TemplateFile Location="Layouts\Javascript\ckeditor\styles.js" />
+    <TemplateFile Location="Layouts\Javascript\jQuery.js" />
+    <TemplateFile Location="Layouts\NewsEdit.aspx" />
+    <TemplateFile Location="ControlTemplates\NewsCreate.ascx" />
+    <TemplateFile Location="ControlTemplates\NewsEdit.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="CSCV.GROUP1.NewsAnnouncement_News Feature\Feature.xml" />
+  </FeatureManifests>
+</Solution>

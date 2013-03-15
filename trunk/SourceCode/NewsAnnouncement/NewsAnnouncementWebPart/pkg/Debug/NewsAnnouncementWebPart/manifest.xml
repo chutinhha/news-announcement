@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="08586853-df6d-465f-afd1-136f541fc75f" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="CSCV.GROUP.NewsAnnouncement.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="CSCV.GROUP.NewsAnnouncement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83dfd338c1bf76e8" Namespace="NewsAnnouncementWebPart.NewsAnnouncementWebPart" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\NewsAnnouncementWebPart\NewsAnnouncementWebPart\NewsAnnouncementWebPartUserControl.ascx" />
+    <TemplateFile Location="Layouts\CSCV.GROUP1.NewsAnnouncement\CreateNews.aspx" />
+    <TemplateFile Location="ControlTemplates\CSCV.GROUP1.NewsAnnouncement\CreateNewsControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="CSCV.GROUP1.NewsAnnouncement_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
