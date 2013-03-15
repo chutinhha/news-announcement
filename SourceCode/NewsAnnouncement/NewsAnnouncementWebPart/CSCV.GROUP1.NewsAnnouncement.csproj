@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,11 +34,18 @@
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
@@ -45,6 +54,20 @@
     <Reference Include="System.Web.Extensions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlTemplates\CSCV.GROUP1.NewsAnnouncement\CreateNewsControl.ascx.cs">
+      <DependentUpon>CreateNewsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\CSCV.GROUP1.NewsAnnouncement\CreateNewsControl.ascx.designer.cs">
+      <DependentUpon>CreateNewsControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\CSCV.GROUP1.NewsAnnouncement\CreateNews.aspx.cs">
+      <DependentUpon>CreateNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CSCV.GROUP1.NewsAnnouncement\CreateNews.aspx.designer.cs">
+      <DependentUpon>CreateNews.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\IBaseRepository.cs" />
     <Compile Include="Model\INewsRepository.cs" />
     <Compile Include="Model\NewsRepository.cs" />
@@ -56,12 +79,28 @@
     <Compile Include="NewsAnnouncementWebPart\NewsAnnouncementWebPartUserControl.ascx.designer.cs">
       <DependentUpon>NewsAnnouncementWebPartUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="News_Utilities\NewsString.cs" />
     <Compile Include="Presenter\NewsPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\INewsView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b561254-71ea-45ba-8566-51de4e30e166}</SharePointProjectItemId>
+    </None>
+    <None Include="CSCV\ListInstance1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9b523342-9d21-4398-b2b1-0d12a7320b38}</SharePointProjectItemId>
+    </None>
+    <None Include="CSCV\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1ad6ab71-081d-4921-b4ee-597db703abd8}</SharePointProjectItemId>
+    </None>
+    <None Include="ImageList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87135521-0160-43f2-ae42-b68ddaeea51a}</SharePointProjectItemId>
+    </None>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7b8fbdfe-320a-41ac-88ae-a7465494b944}</SharePointProjectItemId>
+    </None>
     <None Include="NewsAnnouncementWebPart\NewsAnnouncementWebPart.webpart" />
     <None Include="NewsAnnouncementWebPart\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7cc5ea27-516d-4f5d-b975-250a308467fc}</SharePointProjectItemId>
@@ -69,6 +108,16 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ControlTemplates\CSCV.GROUP1.NewsAnnouncement\CreateNewsControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="CSCV\Elements.xml" />
+    <Content Include="CSCV\ListInstance1\Elements.xml" />
+    <Content Include="CSCV\Schema.xml" />
+    <Content Include="ImageList\Elements.xml" />
+    <Content Include="Layouts\CSCV.GROUP1.NewsAnnouncement\CreateNews.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
     <Content Include="NewsAnnouncementWebPart\Elements.xml" />
     <Content Include="NewsAnnouncementWebPart\NewsAnnouncementWebPartUserControl.ascx">
       <SubType>ASPXCodeBehind</SubType>
@@ -91,6 +140,8 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+    <Folder Include="CustomList\" />
+    <Folder Include="NewsList\ListInstance1\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
