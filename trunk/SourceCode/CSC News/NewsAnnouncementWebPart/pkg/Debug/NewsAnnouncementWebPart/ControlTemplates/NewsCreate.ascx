@@ -12,12 +12,7 @@
         width: 122px;
     }
 </style>
-<script type="text/javascript" src="/_layouts/Javascript/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="/_layouts/Javascript/jQuery.js"></script>
-<script type="text/javascript">
-    var textBox = document.getElementById("txtContent");
-    CKEDITOR.replace(textBox, { width: '500px' });
-</script>
+
 <table style="width:100%;">
     <tr>
         <td class="style1">

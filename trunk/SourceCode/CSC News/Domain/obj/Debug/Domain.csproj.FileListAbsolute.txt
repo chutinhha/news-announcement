@@ -18,3 +18,8 @@ C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\bin\De
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\Domain.dll
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\Domain\obj\Debug\Domain.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\Domain\bin\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\Domain\bin\Debug\Domain.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\Domain\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\Domain\obj\Debug\Domain.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\Domain\obj\Debug\Domain.pdb

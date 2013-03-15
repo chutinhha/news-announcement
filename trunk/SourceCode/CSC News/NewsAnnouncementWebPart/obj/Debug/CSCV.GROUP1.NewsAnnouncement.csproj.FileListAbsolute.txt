@@ -18,3 +18,9 @@ C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncem
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
 C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
