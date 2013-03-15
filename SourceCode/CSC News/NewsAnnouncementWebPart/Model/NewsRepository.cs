@@ -6,6 +6,7 @@ using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 using System.IO;
 using NewsAnnouncementWebPart.News_Utilities;
+using Domain;
 
 namespace NewsAnnouncementWebPart.Model
 {
@@ -15,56 +16,76 @@ namespace NewsAnnouncementWebPart.Model
     public class NewsRepository : INewsRepository
     {
         private string _listName;
-        private SPWeb spWeb;
+        private SPSite _spSite;
+        private SPWeb _spWeb;
+        private SPList _spList;
 
         public NewsRepository(string listName)
         {
             _listName = listName;
+            _spSite = new SPSite(NewsString.RootSiteUrl);
+            _spWeb = _spSite.RootWeb;
+            _spList = _spWeb.GetList(_listName); 
         }
 
         public bool Add(Domain.News entity)
         {
-            SPSite site = new SPSite(NewsString.rootSiteURL);
-            SPWeb spWeb = site.RootWeb;
-            SPList newsList = spWeb.GetList(NewsString._newsListURL);
-            SPListItem itemToAdd = newsList.Items.Add();
+//            SPSite site = new SPSite(NewsString.RootSiteUrl);
+//#if DEBUG
+//            Console.WriteLine("Site : " + NewsString.RootSiteUrl);   
+//#endif
+//            SPWeb spWeb = site.RootWeb;
 
-            //-------------
-            itemToAdd[NewsGuid.Title] = entity.Tittle;
-            itemToAdd[NewsGuid.FromDate] = entity.FromDate;
-            itemToAdd[NewsGuid.ToDate] = entity.ToDate;
-            itemToAdd[NewsGuid.Content] = entity.Content;
+            try
+            {
+                //SPList newsList = spWeb.GetList(NewsString.NewsListUrl);
+                SPListItem itemToAdd = _spList.Items.Add();
 
-            SPList pictureLibrary = spWeb.GetList(NewsString._picLibraryURL);
-            string picGuid = pictureLibrary.ID.ToString();
+                //-------------
+                itemToAdd[NewsGuid.Title] = entity.Tittle;
+                itemToAdd[NewsGuid.FromDate] = entity.FromDate;
+                itemToAdd[NewsGuid.ToDate] = entity.ToDate;
+                itemToAdd[NewsGuid.Content] = entity.Content;
 
-            string fileExtension = Path.GetExtension(entity.ImageUrl);
-            string fileName = Guid.NewGuid().ToString() + fileExtension;
+                SPList pictureLibrary = _spWeb.GetList(NewsString.PiclibaryUrl);
+                string picGuid = pictureLibrary.ID.ToString();
+
+                string fileExtension = Path.GetExtension(entity.ImageUrl);
+                string fileName = Guid.NewGuid().ToString() + fileExtension;
+
+                //fileName = NewsUtil.GenerateValidImageName(fileName, pictureLibrary);
+
+                pictureLibrary.RootFolder.Files.Add(fileName, entity.ImageByte);
+                string image = NewsString.PiclibaryUrl + fileName;
+                itemToAdd[NewsGuid.Image] = image;
+                pictureLibrary.Update();
+                itemToAdd.Update();
+            }
+            catch (Exception exception)
+            {
+                Logger.WriteLog(exception, "debug");
+                return false;
+                
+            }
+
             
-            //fileName = NewsUtil.GenerateValidImageName(fileName, pictureLibrary);
-
-            pictureLibrary.RootFolder.Files.Add(fileName, entity.ImageByte);
-            string image = NewsString._picLibraryURL + fileName;
-            itemToAdd[NewsGuid.Image] = image;
-            pictureLibrary.Update();
-            itemToAdd.Update();
             return true;
         }
 
         public bool Delete(int id)
         {
-            SPSite site = new SPSite(NewsString.rootSiteURL);
-            spWeb = site.RootWeb;
-            SPList newsList = spWeb.GetList(NewsString._newsListURL);
-            SPQuery query = new SPQuery(newsList.DefaultView);
+            //SPSite site = new SPSite(NewsString.RootSiteUrl);
+            //spWeb = site.RootWeb;
+            //SPList newsList = spWeb.GetList(NewsString.NewsListUrl);
+            SPQuery query = new SPQuery(_spList.DefaultView);
             query.ViewFields = "<Query><Where><Eq><FieldRef Name='ID' /><Value Type='Counter'>" + id + "</Value></Eq></Where></Query>";
-            SPListItemCollection itemDeleteCollection = newsList.GetItems(query);
+            SPListItemCollection itemDeleteCollection = _spList.GetItems(query);
             if (itemDeleteCollection.Count > 0)
             {
                 SPListItem itemDelete = itemDeleteCollection[0];
-                SPList pictureLibrary = spWeb.Lists[NewsString._picLibraryURL];
+                SPList pictureLibrary = _spWeb.Lists[NewsString.PiclibaryUrl];
                 //Delete relevant image
-                SPFile existingImage = pictureLibrary.RootFolder.Files[NewsString._picLibraryURL + itemDelete[NewsGuid.Image]];
+                SPFile existingImage = pictureLibrary.RootFolder.Files[NewsString.PiclibaryUrl + itemDelete[NewsGuid.Image]];
                 existingImage.Delete();
                 existingImage.Update();
                 //Delete selected item
@@ -78,13 +99,13 @@ namespace NewsAnnouncementWebPart.Model
         {
             string fileName = "";
             int itemID = entity.Id;
-            SPSite site = new SPSite(NewsString.rootSiteURL);
-            SPWeb spWeb = site.RootWeb;
+            //SPSite site = new SPSite(NewsString.RootSiteUrl);
+            //SPWeb spWeb = site.RootWeb;
             //-------------
-            SPList newsList = spWeb.GetList(NewsString._newsListURL);
-                SPQuery query = new SPQuery(newsList.DefaultView);
+            //SPList newsList = spWeb.GetList(NewsString.NewsListUrl);
+                SPQuery query = new SPQuery(_spList.DefaultView);
                 query.ViewFields = "<Query><Where><Eq><FieldRef Name='ID' /><Value Type='Counter'>" + itemID + "</Value></Eq></Where></Query>";
-                SPListItemCollection itemUpdateCollection = newsList.GetItems(query);
+                SPListItemCollection itemUpdateCollection = _spList.GetItems(query);
                 if (itemUpdateCollection.Count > 0)
                 {
                     SPListItem itemUpdate = itemUpdateCollection[0];
@@ -95,17 +116,17 @@ namespace NewsAnnouncementWebPart.Model
                     if (entity.ImageUrl != null)
                     {
                         //Get picture library
-                        SPList pictureLibrary = spWeb.Lists[NewsString._picLibraryURL];
+                        SPList pictureLibrary = _spWeb.Lists[NewsString.PiclibaryUrl];
                         string fileExtension = Path.GetExtension(entity.ImageUrl);
                         fileName = Guid.NewGuid() + fileExtension;
                         //Delete existing image
-                        SPFile existingImage = pictureLibrary.RootFolder.Files[NewsString._picLibraryURL + itemUpdate[NewsGuid.Image]];
+                        SPFile existingImage = pictureLibrary.RootFolder.Files[NewsString.PiclibaryUrl + itemUpdate[NewsGuid.Image]];
                         existingImage.Delete();
                         existingImage.Update();
 
                         //Add new image
                         pictureLibrary.RootFolder.Files.Add(fileName, entity.ImageByte);
-                        string image = NewsString._picLibraryURL + fileName;
+                        string image = NewsString.PiclibaryUrl + fileName;
                         itemUpdate[NewsGuid.Image] = image;
                         pictureLibrary.Update();
                     }
@@ -116,12 +137,88 @@ namespace NewsAnnouncementWebPart.Model
 
         public Domain.News Get(int id)
         {
-            throw new NotImplementedException();
+            News entity = new News();
+
+            SPQuery query = new SPQuery(_spList.DefaultView);
+            StringBuilder queryString = new StringBuilder();
+            queryString.Append("<Query><Where><Eq>");
+            queryString.Append("<FieldRef Name='ID' />");
+            queryString.Append("<Value Type='Counter'>");
+            queryString.Append(id.ToString());
+            queryString.Append("</Value>");
+            queryString.Append("</Eq></Where></Query>");
+            query.ViewFields = queryString.ToString();
+
+            SPListItemCollection items = _spList.GetItems(query);
+
+            if (items.Count > 0)
+            {
+#if DEBUG
+                Console.WriteLine("Item is found");
+                Console.WriteLine("Id: ", id);
+#endif
+                try
+                {
+                    SPListItem item = items[0];
+                    entity.FromDate = (DateTime)item[NewsGuid.FromDate];
+                    entity.ToDate = (DateTime)item[NewsGuid.ToDate];
+                    entity.Tittle = (String)item[NewsGuid.Title];
+                    StringBuilder content = new StringBuilder((String)item[NewsGuid.Content]);
+                    entity.Content = content;
+                    entity.ImageUrl = (String)item[NewsGuid.Image];
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+            return entity;
         }
 
-        public Microsoft.SharePoint.SPList Get()
+        public IEnumerable<News> Get()
         {
-            throw new NotImplementedException();
+            SPQuery query = new SPQuery(_spList.DefaultView);
+            StringBuilder queryString = new StringBuilder();
+            List<News> listNews = new List<News>();
+            News entity = new News();
+            queryString.Append("<GetListItems><Query><OrderBy><FieldRef Name='NewsDateFrom' Ascending='True' />");
+            queryString.Append("</OrderBy></Query><ViewFields>");
+            queryString.Append("<FieldRef Name='ID' />");
+            queryString.Append("<FieldRef Name='Title' />");
+            queryString.Append("<FieldRef Name='NewsDateFrom' />");
+            queryString.Append("<FieldRef Name='NewsDateTo' />");
+            queryString.Append("<FieldRef Name='NewsImage' />");
+            queryString.Append("<FieldRef Name='NewsShort' />");
+            queryString.Append("</ViewFields><QueryOptions />");
+            queryString.Append("</GetListItems>");
+
+            query.ViewFields = queryString.ToString();
+
+            SPListItemCollection items = _spList.GetItems(query);
+#if DEBUG
+            Console.WriteLine("Items count: {0}", items.Count);   
+#endif
+            foreach (SPListItem item in items)
+            {
+                try
+                {                   
+                    entity.FromDate = (DateTime)item[NewsGuid.FromDate];
+                    entity.ToDate = (DateTime)item[NewsGuid.ToDate];
+                    entity.Tittle = (String)item[NewsGuid.Title];
+                    StringBuilder content = new StringBuilder((String)item[NewsGuid.Content]);
+                    entity.Content = content;
+                    entity.ImageUrl = (String)item[NewsGuid.Image];
+
+                    listNews.Add(entity);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+
+            return listNews;
         }
     }
 }
