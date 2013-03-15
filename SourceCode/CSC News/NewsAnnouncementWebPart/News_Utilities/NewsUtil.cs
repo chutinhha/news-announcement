@@ -34,5 +34,22 @@ namespace NewsAnnouncementWebPart.News_Utilities
             } while (imageCollection.Count > 0);
             return fileName;
         }
+
+        public static NewsAnnouncementWebPart.NewsAnnouncementWebPart WebPart { get; set; }
+        
+        public static bool IsContribute() { 
+        SPSite spSite = new SPSite(NewsString.RootSiteUrl);
+            SPWeb spWeb = spSite.RootWeb;
+            SPUser currentUser = spWeb.CurrentUser;
+            SPGroup group = spWeb.SiteGroups[NewsUtil.WebPart.PropertyValue];
+            bool flag = false;
+            foreach (SPGroup loop in currentUser.Groups) {
+                if (loop.Name.Equals(group.Name)) {
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }
     }
 }

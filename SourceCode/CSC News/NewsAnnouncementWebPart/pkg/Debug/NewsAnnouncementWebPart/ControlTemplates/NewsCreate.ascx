@@ -12,7 +12,6 @@
         width: 122px;
     }
 </style>
-
 <table style="width:100%;">
     <tr>
         <td class="style1">
@@ -46,7 +45,10 @@
         <td class="style1">
             Short Description:</td>
         <td>
-        <asp:TextBox ID="txtContent" TextMode="MultiLine" Rows="15" Width = "500px" runat="server"></asp:TextBox>
+        <SharePoint:InputFormTextBox ID="txtContent" TextMode="MultiLine" Rows="10"
+    Columns="50" RichText="true" MaxLength="4000" runat="server" RichTextMode="FullHtml"
+    EnableViewState="false">  
+</SharePoint:InputFormTextBox>
         </td>
     </tr>
     <tr>
