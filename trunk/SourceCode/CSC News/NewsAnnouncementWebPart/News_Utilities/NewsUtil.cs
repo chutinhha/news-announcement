@@ -51,5 +51,26 @@ namespace NewsAnnouncementWebPart.News_Utilities
             }
             return flag;
         }
+
+        public static bool IsGroupAlreadyExist(SPWeb web, string groupName)
+        {
+            bool isExist = false;
+
+            try
+            {
+                SPGroup group = web.SiteGroups[groupName];
+                isExist = true;
+            }
+            catch (SPException)
+            {
+                isExist = false;
+            }
+            catch (Exception)
+            {
+                isExist = false;
+            }
+            return isExist;
+        }
+
     }
 }
