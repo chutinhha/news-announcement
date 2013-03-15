@@ -39,9 +39,10 @@ namespace NewsAnnouncementWebPart.Features.News_Feature
             SPSite site = new SPSite(NewsString.RootSiteUrl);
             SPWeb spWeb = site.RootWeb;
             spWeb.AllowUnsafeUpdates = true;
-            SPGroup userGroup = spWeb.SiteGroups[NewsString.GroupContribute];
-            if (userGroup == null)
-            {
+            SPGroupCollection groupCollection = spWeb.Groups;
+
+            if (NewsUtil.IsGroupAlreadyExist(spWeb,NewsString.GroupContribute) == false)
+            {              
                 spWeb.SiteGroups.Add(NewsString.GroupContribute, spWeb.CurrentUser, spWeb.CurrentUser, string.Empty);
                 SPGroup group = spWeb.SiteGroups[NewsString.GroupContribute];
                 SPRoleDefinition roleDefinition = spWeb.RoleDefinitions.GetByType(SPRoleType.Contributor);
@@ -52,7 +53,7 @@ namespace NewsAnnouncementWebPart.Features.News_Feature
             }
         }
 
-
+        
         // Uncomment the method below to handle the event raised before a feature is uninstalled.
 
         //public override void FeatureUninstalling(SPFeatureReceiverProperties properties)
