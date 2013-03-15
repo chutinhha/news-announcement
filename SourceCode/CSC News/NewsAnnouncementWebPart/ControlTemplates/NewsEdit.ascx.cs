@@ -22,15 +22,16 @@ namespace NewsAnnouncementWebPart.ControlTemplates
             news.FromDate = txtFrom.SelectedDate;
             news.ToDate = txtTo.SelectedDate;
             news.Tittle = txtTitle.Text;
+            news.ImageUrl = txtImage.FileName;
             StringBuilder builder = new StringBuilder(txtShort.Text);
             news.Content =builder;
-            NewsRepository model = new NewsRepository("");
+            NewsRepository model = new NewsRepository("list");
             model.Update(news);
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            NewsRepository model = new NewsRepository("");
+            NewsRepository model = new NewsRepository("list");
             int id = int.Parse(Request.QueryString["itemID"]);
             model.Delete(id);
         }
