@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="BrandingAssets" Url="Style Library" RootWebOnly="FALSE">
+        <File Path="BrandingAssets\css\styles.css" Url="SPBranding.CSCV.GROUP1.NewsAnnouncement/css/styles.css" Type="GhostableInLibrary" />
+        <File Path="BrandingAssets\images\favicon.ico" Url="SPBranding.CSCV.GROUP1.NewsAnnouncement/images/favicon.ico" Type="GhostableInLibrary" />
+    </Module>
+</Elements>
