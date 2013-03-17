@@ -7,7 +7,7 @@ namespace NewsAnnouncementWebPart.News_Utilities
 {
     public static class NewsGuid
     {
-        public static Guid FromDate = new Guid("29261A1F-173F-46AA-8926-8C4C6A2B9286");
+        public static Guid FromDate = new Guid("29261a1f-173f-46aa-8926-8c4c6a2b9286");
         public static Guid ToDate = new Guid("55F22A68-3991-4793-8F2F-E7BA57CDA4B5");
         public static Guid Title = new Guid("fa564e0f-0c70-4ab9-b863-0177e6ddd247");
         public static Guid Content = new Guid("B85BF0C2-1B0D-4489-A3FC-CB79E1553412");

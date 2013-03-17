@@ -56,8 +56,9 @@ namespace NewsAnnouncementWebPart.Model
                 Console.Write(exception.Message);
                 /*
                 Logger.WriteLog(exception, "debug");
-                return false;               
-            */}
+                return false;*/
+                LogEnginee.LogError("Add_News", exception.Message);
+            }
 
             
             return true;
@@ -145,7 +146,7 @@ namespace NewsAnnouncementWebPart.Model
                     entity.ToDate = (DateTime)item[NewsGuid.ToDate];
                     entity.Tittle = (String)item[NewsGuid.Title];
                     StringBuilder content = new StringBuilder((String)item[NewsGuid.Content]);
-                    entity.Content = content;
+                    entity.Content = content.ToString();
                     entity.ImageUrl = (String)item[NewsGuid.Image];
                 }
                 catch (Exception ex)
@@ -159,45 +160,56 @@ namespace NewsAnnouncementWebPart.Model
 
         public IEnumerable<News> Get()
         {
-            SPQuery query = new SPQuery(_spList.DefaultView);
-            StringBuilder queryString = new StringBuilder();
-            List<News> listNews = new List<News>();
-            News entity = new News();
-            queryString.Append("<GetListItems><Query><OrderBy><FieldRef Name='NewsDateFrom' Ascending='True' />");
-            queryString.Append("</OrderBy></Query><ViewFields>");
-            queryString.Append("<FieldRef Name='ID' />");
-            queryString.Append("<FieldRef Name='Title' />");
-            queryString.Append("<FieldRef Name='NewsDateFrom' />");
-            queryString.Append("<FieldRef Name='NewsDateTo' />");
-            queryString.Append("<FieldRef Name='NewsImage' />");
-            queryString.Append("<FieldRef Name='NewsShort' />");
-            queryString.Append("</ViewFields><QueryOptions />");
-            queryString.Append("</GetListItems>");
-
-            query.ViewFields = queryString.ToString();
-
-            SPListItemCollection items = _spList.GetItems(query);
-#if DEBUG
-            Console.WriteLine("Items count: {0}", items.Count);   
-#endif
-            foreach (SPListItem item in items)
+            List<News> listNews;
+            try
             {
-                try
-                {                   
-                    entity.FromDate = (DateTime)item[NewsGuid.FromDate];
-                    entity.ToDate = (DateTime)item[NewsGuid.ToDate];
-                    entity.Tittle = (String)item[NewsGuid.Title];
-                    StringBuilder content = new StringBuilder((String)item[NewsGuid.Content]);
-                    entity.Content = content;
-                    entity.ImageUrl = (String)item[NewsGuid.Image];
+                SPQuery query = new SPQuery(_spList.DefaultView);
+                StringBuilder queryString = new StringBuilder();
+                listNews = new List<News>();
+                News entity = new News();
+                queryString.Append("<Query><OrderBy><FieldRef Name='NewsDateFrom' Ascending='True' /></OrderBy>");
+                queryString.Append("</Query>");
+                queryString.Append("<FieldRef Name='ID' />");
+                queryString.Append("<FieldRef Name='Title' />");
+                queryString.Append("<FieldRef Name='NewsDateFrom' />");
+                queryString.Append("<FieldRef Name='NewsDateTo' />");
+                queryString.Append("<FieldRef Name='NewsImage' />");
+                queryString.Append("<FieldRef Name='NewsShort' />");
 
-                    listNews.Add(entity);
-                }
-                catch (Exception ex)
+                query.ViewFields = queryString.ToString();
+
+                SPListItemCollection items = _spList.GetItems(query);
+
+#if DEBUG
+                Console.WriteLine("Items count: {0}", items.Count);
+#endif
+                foreach (SPListItem item in items)
                 {
-                    throw ex;
+                    
+                        //entity.FromDate = (DateTime)item[NewsGuid.FromDate];
+                        entity.FromDate = (DateTime)item[NewsGuid.FromDate];
+                        entity.ToDate = (DateTime)item[NewsGuid.ToDate];
+                        entity.Tittle = (String)item[NewsGuid.Title];
+                        StringBuilder content = new StringBuilder((String)item[NewsGuid.Content]);
+                        entity.Content = content.ToString();
+                        String temp = (String)item[NewsGuid.Image];
+                        String[] url = temp.Trim().Split(',');
+
+                        if (url.Count() > 0)
+                        {
+                            entity.ImageUrl = url[0]; 
+                        }
+
+                        listNews.Add(entity);
+                  
                 }
             }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+
 
             return listNews;
         }
