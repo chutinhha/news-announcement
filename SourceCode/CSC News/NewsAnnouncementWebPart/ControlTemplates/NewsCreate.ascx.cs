@@ -34,7 +34,7 @@ namespace NewsAnnouncementWebPart.ControlTemplates.CSCV.GROUP1.NewsAnnouncement
             entity.Tittle = txtTitle.Text;
             entity.FromDate = txtFrom.SelectedDate;
             entity.ToDate = txtTo.SelectedDate;
-            entity.Content = new StringBuilder(txtContent.Text);
+            entity.Content = new StringBuilder(txtContent.Text).ToString();
             entity.ImageByte = txtImage.FileBytes;
             entity.ImageUrl = txtImage.FileName;
         }

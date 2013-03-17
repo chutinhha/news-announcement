@@ -13,5 +13,6 @@ namespace NewsAnnouncementWebPart.News_Utilities
         public static string NewsListURL = "http://" + SPServer.Local.Address.ToString() + "/Lists/CSC-News-List";
         public static string RootSiteUrl = "http://" + SPServer.Local.Address.ToString();
         public static string GroupContribute = "HR";
+        public static string LogginEngineeName = "News Logging Enginee";
     }
 }

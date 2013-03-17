@@ -24,7 +24,7 @@ namespace NewsAnnouncementWebPart.ControlTemplates
             news.Tittle = txtTitle.Text;
             news.ImageUrl = txtImage.FileName;
             StringBuilder builder = new StringBuilder(txtShort.Text);
-            news.Content =builder;
+            news.Content =builder.ToString();
             NewsRepository model = new NewsRepository("list");
             model.Update(news);
         }
