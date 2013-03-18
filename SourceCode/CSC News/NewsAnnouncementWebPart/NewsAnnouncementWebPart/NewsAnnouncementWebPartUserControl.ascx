@@ -9,25 +9,23 @@
     Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="NewsAnnouncementWebPartUserControl.ascx.cs"
     Inherits="NewsAnnouncementWebPart.NewsAnnouncementWebPart.NewsAnnouncementWebPartUserControl" %>
-<div id="news">
-    <ul>
-        <asp:Repeater ID="repeater" runat="server">
-            <HeaderTemplate>
-                <div id="news-container">
-            </HeaderTemplate>
-            <ItemTemplate>
-                <img src='<%# DataBinder.Eval(Container.DataItem, "ImageUrl")%>' alt="" />
-                <div class="title">
-                    <%# DataBinder.Eval(Container.DataItem, "Tittle")%>
-                </div>
-                <div class="content">
-                    <%# DataBinder.Eval(Container.DataItem, "Content")%>
-                </div>
-            </ItemTemplate>
-            <FooterTemplate>
-                </div>
-            </FooterTemplate>
-        </asp:Repeater>
-    </ul>
-</div>
+<asp:Repeater ID="repeater" runat="server">
+    <HeaderTemplate>
+        <div class="news">
+    </HeaderTemplate>
+    <ItemTemplate>
+        <div class="news-container">
+            <img src='<%# DataBinder.Eval(Container.DataItem, "ImageUrl")%>' alt="" />
+            <div class="title">
+                <%# DataBinder.Eval(Container.DataItem, "Tittle")%>
+            </div>
+            <div class="content">
+                <%# DataBinder.Eval(Container.DataItem, "Content")%>
+            </div>
+        </div>
+    </ItemTemplate>
+    <FooterTemplate>
+        </div>
+    </FooterTemplate>
+</asp:Repeater>
 <asp:HyperLink ID="linkAddNews" runat="server" NavigateUrl="~/_layouts/CreateNews.aspx">Add News</asp:HyperLink>
