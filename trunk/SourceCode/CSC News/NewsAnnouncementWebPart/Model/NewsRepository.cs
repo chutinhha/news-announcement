@@ -163,21 +163,25 @@ namespace NewsAnnouncementWebPart.Model
             List<News> listNews;
             try
             {
-                SPQuery query = new SPQuery(_spList.DefaultView);
+                SPQuery query = new SPQuery();
                 StringBuilder queryString = new StringBuilder();
+                StringBuilder queryViewField = new StringBuilder();
                 listNews = new List<News>();
-                News entity = new News();
-                queryString.Append("<Query><OrderBy><FieldRef Name='NewsDateFrom' Ascending='True' /></OrderBy>");
-                queryString.Append("</Query>");
-                queryString.Append("<FieldRef Name='ID' />");
-                queryString.Append("<FieldRef Name='Title' />");
-                queryString.Append("<FieldRef Name='NewsDateFrom' />");
-                queryString.Append("<FieldRef Name='NewsDateTo' />");
-                queryString.Append("<FieldRef Name='NewsImage' />");
-                queryString.Append("<FieldRef Name='NewsShort' />");
+               
+                queryString.Append("<OrderBy><FieldRef Name='NewsDateFrom' Ascending='False' />");
+                queryString.Append("</OrderBy>");
 
-                query.ViewFields = queryString.ToString();
+                query.Query = queryString.ToString();
 
+                queryViewField.Append("<FieldRef Name='ID' Ascending='True'/>");
+                queryViewField.Append("<FieldRef Name='Title' Ascending='True'/>");
+                queryViewField.Append("<FieldRef Name='NewsDateFrom' Ascending='True'/>");
+                queryViewField.Append("<FieldRef Name='NewsDateTo' Ascending='True'/>");
+                queryViewField.Append("<FieldRef Name='NewsImage' Ascending='True'/>");
+                queryViewField.Append("<FieldRef Name='NewsShort' Ascending='True'/>");
+
+                query.ViewFields = queryViewField.ToString();
+                query.RowLimit = 4;              
                 SPListItemCollection items = _spList.GetItems(query);
 
 #if DEBUG
@@ -185,7 +189,7 @@ namespace NewsAnnouncementWebPart.Model
 #endif
                 foreach (SPListItem item in items)
                 {
-                    
+                        News entity = new News();
                         //entity.FromDate = (DateTime)item[NewsGuid.FromDate];
                         entity.FromDate = (DateTime)item[NewsGuid.FromDate];
                         entity.ToDate = (DateTime)item[NewsGuid.ToDate];
