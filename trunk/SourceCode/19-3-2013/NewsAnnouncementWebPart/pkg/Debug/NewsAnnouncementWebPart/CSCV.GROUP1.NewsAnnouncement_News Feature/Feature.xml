@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="My Visual WebPart Feature" Id="463d2c66-ce37-4d37-95f6-24a325087998" ReceiverAssembly="CSCV.GROUP.NewsAnnouncement, Version=1.0.0.0, Culture=neutral, PublicKeyToken=83dfd338c1bf76e8" ReceiverClass="NewsAnnouncementWebPart.Features.News_Feature.News_FeatureEventReceiver" Scope="Site" Title="NewsAnnouncementWebPart Feature1">
+  <ElementManifests>
+    <ElementManifest Location="NewsAnnouncementWebPart\Elements.xml" />
+    <ElementFile Location="NewsAnnouncementWebPart\NewsAnnouncementWebPart.webpart" />
+    <ElementManifest Location="NewsPicture\Elements.xml" />
+    <ElementManifest Location="listNewsInstance\Elements.xml" />
+    <ElementManifest Location="ListNews\Elements.xml" />
+    <ElementFile Location="ListNews\Schema.xml" />
+  </ElementManifests>
+</Feature>
