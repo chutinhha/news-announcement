@@ -1,0 +1,298 @@
+﻿/* ====== default css for the master page ====== */
+/* --- purely optional - let SharePoint display vertical scroll only when necessary --- */
+body #s4-workspace
+{
+    overflow: auto;
+}
+#s4-workspace #s4-pageFooter
+{
+	clear: both;
+}
+.ms-dialog #pageContentWrapper
+{
+    padding: 8px;
+}
+
+/* ====== End default css for the master page ====== */
+
+
+
+/* ====== css for your design ====== */
+body #s4-workspace
+{
+} 
+.s4-pageWrapper
+{
+}
+/* ====== End css for your design ====== */
+body #s4-ribbonrow
+{
+	background-image:url('../images/Ribbon-bg.png');
+}
+
+.s4-tn
+{
+    background-image:url('../images/TopNav-bg.png');
+    margin: 0px 5px;
+    padding:0px;
+    height:35px;
+    }
+
+.s4-tn li.static > .menu-item 
+{
+    color: #ffffff;
+    font-weight:bold; 
+    padding:10px;   
+    vertical-align: middle;   
+    border-left:1px solid #457EB1;
+	border-right:1px solid #0A4981;
+}
+.s4-toplinks .s4-tn a.selected
+{
+	border-top:0px;
+	border-bottom:0px;
+	border-left:1px solid #457EB1;
+	border-right:1px solid #0A4981;
+	margin:0px;
+	background-image:url('../images/TopNav-selected-bg.png');
+}
+
+.s4-toplinks .s4-tn a.selected:hover
+{
+	color:#ffffff;	
+}
+
+
+/* ====================== Main Content ============================== */
+#s4-pageMain
+{		
+	margin-top: 30px;
+	padding: 5px 20px 0px 20px;
+}
+
+.ms-rte-layoutszone-inner
+{    
+    padding: 0px 0px 5px 15px;    
+}
+
+/* ==================================== LEFT PANEL ===================================== */
+#s4-leftpanel{
+	margin-left:5px;	
+}
+
+
+body #s4-leftpanel-content 
+{
+    background-color: #FCFCFC;
+    border-color: #DBDDDE;
+    border-style: solid;
+    border-left:  1px solid #DBDDDE !important;
+    border-right: 1px solid #DBDDDE !important;
+    padding: 0 0 5px;
+}
+
+.ms-quicklaunchouter
+{	
+    background-color: #FCFCFC;
+    border-color: #DBDDDE;
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px 0;
+    background-color: #DDDDDD;
+    color: #4C4C4C;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 3px 4px 3px 10px;
+ 
+}
+
+/* ------- Top rounded bar ------ */
+
+#Top-rounded-bar
+{
+	height:28px;	
+	position:relative;
+	top: 5px;
+}
+
+#Top-rounded-bar-left
+{
+	height:28px;
+	background-image:url('../images/Left-Nav-topLeft.png');
+	background-position:left top;	
+	background-repeat:no-repeat;
+	width: 7px;
+	float:left;	
+}
+
+
+#Top-rounded-bar-mid{
+	height:28px;
+	width: 141px;
+	background-color:#055196;	
+	float:left;	
+}
+
+#Top-rounded-bar-right{
+	height:28px;
+	background-image: url('../images/Left-Nav-topRight.png') ;
+	background-position:right top;	
+	background-repeat:no-repeat;
+	width:7px;
+	float:left;
+	
+}
+
+/* ------- Bottom rounded bar ------ */
+#Bottom-rounded-bar{
+	height:28px;
+	position : relative;
+}
+
+#Bottom-rounded-bar-left{
+	height:28px;
+	background-image:url('../images/Left-Nav-bottomLeft.png');
+	background-position:left bottom;	
+	background-repeat:no-repeat;
+	width: 7px;
+	float:left;
+}
+
+
+#Bottom-rounded-bar-mid{
+	height:28px;
+	width: 141px;
+	background-color:#055196;	
+	float:left;
+
+}
+
+#Bottom-rounded-bar-right{
+	height:28px;
+	background-image:url('../images/Left-Nav-bottomRight.png');
+	background-position:right bottom;	
+	background-repeat:no-repeat;
+	width:7px;
+	float:left;
+
+}
+
+/* ----- Bottom Gradient Background ----- */
+#Bottom-Gradient-Background
+{
+	background-image: url('../images/Left-Nav-bottom-bg.png') ;
+	background-position: left top;
+	background-repeat:repeat-x;
+	height: 154px;
+	width:154px;
+	
+	margin-top:-5px;
+}
+
+/* ========================= PAGE FOOTER ============================================== */ 
+
+#s4-pageFooter{
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #B0B0B0;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px;
+	text-align: center;
+}
+
+/* ========================= WEBPART HEADER ============================================== */ 
+
+.ms-WPHeader .ms-wpTdSpace 
+{
+	background-image:url('../images/WebPartHeader-left.png');
+    width: 6px;
+}
+
+.ms-WPHeader .ms-WPHeaderTdSelection + .ms-wpTdSpace 
+{
+	background-image:url('../images/WebPartHeader-right.png');
+    width: 6px;
+}
+
+.ms-WPHeader td, .ms-fakewptitle 
+{
+    border-bottom: 0px;
+    border-collapse: collapse;    
+}
+
+
+#WebPartTitleWPQ2
+{
+    background-color:#8D8D8D;
+}
+
+.ms-WPTitle, .ms-WPTitle a
+{
+    color:#ffffff;
+ 	font-weight:bold;
+    background-color:#8d8d8d;
+}
+
+.ms-WPHeader > .ms-WPHeaderTdMenu
+{
+	background-color:#8D8D8D;
+}
+
+.ms-WPHeader > .ms-WPHeaderTdSelection{
+	background-color:#8D8D8D;
+}
+
+.s4-ql ul.root > li > a:hover
+{
+	background-color: #BDD3EF;
+	text-decoration:none;
+}
+
+.ms-WPHeader:hover
+{
+background-color:#DDDDDD;
+text-decoration:none;
+}
+
+.ms-rtestate-field a:hover {
+    text-decoration: none;
+}
+
+.ms-siteactionsmenuinner, .ms-siteactionsmenuhover {
+	color: #8d8d8d;
+}
+
+.s4-help
+{
+	margin: 4px 20px 3px 21px;
+	float:left;
+}
+
+.ms-standardheader{
+	/*
+	background-color:#8D8D8D;*/
+}
+
+.ms-WPHeaderTdMenu 
+{
+	border-left-style: none;
+}
+
+.s4-search
+{        
+    margin-right:30px;
+    margin-top:8px;
+}
+
+.s4-search table 
+{
+    width: 212px;
+    float: right;
+    margin-right: 5px;
+}
