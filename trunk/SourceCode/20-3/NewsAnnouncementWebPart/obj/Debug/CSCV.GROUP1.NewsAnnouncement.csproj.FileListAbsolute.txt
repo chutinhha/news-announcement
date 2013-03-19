@@ -1,0 +1,36 @@
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Domain.dll
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Domain.pdb
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Desktop\SourceCode\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Domain.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\Domain.pdb
+C:\Users\Administrator\Downloads\Temp\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Downloads\NewsAnnouncement (1)\NewsAnnouncement\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\bin\Debug\Microsoft.Sharepoint.Sandbox.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\Administrator\Desktop\Source Code\SourceCode\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\Layouts\CSC-Images\icon_error.png
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.dll
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\obj\Debug\CSCV.GROUP.NewsAnnouncement.pdb
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\Layouts\CSC-Images\delete-icon.png
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\Layouts\CSC-Images\edit-icon.png
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\Layouts\CSC-Images\no-image-available.jpg
+C:\Users\DuongKiet\Desktop\CSC News\NewsAnnouncementWebPart\bin\Debug\Layouts\CSC-Images\add-news-icon.png
