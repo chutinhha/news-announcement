@@ -1,0 +1,69 @@
+﻿body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+ /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+margin-right: 15%;
+}
+
+#topsection{
+background: #EAEAEA;
+height: 40px; /*Height of top section*/
+-webkit-border-radius: 8px;
+-webkit-border-bottom-right-radius: 0;
+-moz-border-radius: 8px;
+-moz-border-radius-bottomright: 0;
+border-radius: 8px;
+border-bottom-right-radius: 0;
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+vertical-align:middle;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin-right: 250px; /*Set right margin to RightColumnWidth*/
+}
+
+#rightcolumn{
+float: left;
+width: 250px; /*Width of right column*/
+margin-left: -250px; /*Set left margin to -(RightColumnWidth) */
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#newsImage
+{
+    
+    }
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
