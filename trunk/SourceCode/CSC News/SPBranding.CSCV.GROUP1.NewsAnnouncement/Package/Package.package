@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d1290f8e-d075-4a7c-af4f-d9c4b66dcd0e" solutionId="d1290f8e-d075-4a7c-af4f-d9c4b66dcd0e" resetWebServer="false" name="SPBranding.CSCV.GROUP1.NewsAnnouncement" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
-  <features>
-    <featureReference itemId="ea5d7444-f386-4e84-b8d9-2fb2e3af93c7" />
-  </features>
-</package>
