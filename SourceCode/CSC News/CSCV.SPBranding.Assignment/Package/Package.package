@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="1868fbed-4fb9-4172-a402-d20b0c35ee93" solutionId="1868fbed-4fb9-4172-a402-d20b0c35ee93" resetWebServer="false" name="CSCV.SPBranding.Assignment" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
-  <features>
-    <featureReference itemId="cd37d923-4ab2-4fe4-9034-d23dae95a2ba" />
-  </features>
-</package>

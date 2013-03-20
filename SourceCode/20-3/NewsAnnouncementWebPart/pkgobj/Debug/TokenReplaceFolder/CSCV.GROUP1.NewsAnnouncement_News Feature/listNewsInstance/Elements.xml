@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  <ListInstance Title="CSC News"
-                OnQuickLaunch="TRUE"
-                TemplateType="10001"
-                Url="Lists/CSC-News-List"
-                Description="List used to store news">
-  </ListInstance>
-</Elements>
