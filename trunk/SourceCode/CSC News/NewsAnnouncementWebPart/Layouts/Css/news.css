@@ -1,0 +1,41 @@
+﻿body
+{
+}
+.news 
+{
+    
+}
+.news-container 
+{
+    display:inline;
+    float:left;
+    width:780px;
+    margin:0 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-container img 
+{
+    width:100px;
+    height: 80px;
+    float: left;
+    margin-right: 20px
+}
+
+.news-container .title 
+{
+    width: 560px;
+    float: left;
+    font-size: 20px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.news-container .content
+{
+    width: 560px;
+    float: left;
+    font-size: 8pt;
+}
